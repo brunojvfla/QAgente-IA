@@ -1,0 +1,55 @@
+node_modules/
+.pnpm-store/
+.next/
+.next-preview/
+dist/
+coverage/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.log
+apps/api/prisma/*.db
+apps/api/storage/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Next.js
+.next/
+.next-preview/
+
+# Build
+dist/
+build/
+
+# Tests
+coverage/
+playwright-report/
+test-results/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Database local files
+apps/api/prisma/*.db
+apps/api/storage/
+
+# TypeScript cache
+**/*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/extensions.json

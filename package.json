@@ -1,0 +1,20 @@
+{
+  "name": "qagent",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.18.3",
+  "scripts": {
+    "dev": "pnpm --filter @qagent/shared build && pnpm --parallel --filter @qagent/api --filter @qagent/web dev",
+    "build": "pnpm --filter @qagent/shared build && pnpm --filter @qagent/api build && pnpm --filter @qagent/web build",
+    "lint": "pnpm --filter @qagent/shared lint && pnpm --filter @qagent/api lint && pnpm --filter @qagent/web lint",
+    "typecheck": "pnpm --filter @qagent/shared typecheck && pnpm --filter @qagent/api typecheck && pnpm --filter @qagent/web typecheck",
+    "test": "pnpm --filter @qagent/api test && pnpm --filter @qagent/web test:e2e",
+    "db:generate": "pnpm --filter @qagent/api prisma:generate",
+    "db:migrate": "pnpm --filter @qagent/api prisma:migrate",
+    "db:deploy": "pnpm --filter @qagent/api prisma:deploy",
+    "db:studio": "pnpm --filter @qagent/api prisma:studio"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
